@@ -1,0 +1,58 @@
+/* Общие стили для контейнера */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+}
+
+
+
+/* Стили для input элементов */
+.form__input_box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-container__input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.form-container__input:focus {
+  border-color: #8884d8;
+}
+
+/* Стили для лейблов */
+.form__input_box label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Заголовки для графиков */
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Стили для баров в графиках */
+.recharts-bar-rectangle {
+  transition: all 0.3s ease;
+}
+
+.recharts-bar-rectangle:hover {
+  opacity: 0.8;
+}
+
+/* Контейнер для графиков */
+.recharts-responsive-container {
+  margin-top: 2rem;
+}

@@ -1,7 +1,21 @@
 import React from 'react';
 import './Balance.css';
+import { useSelector } from 'react-redux';
+import Cookies from 'js-cookie';
 
-const Balance = ({ balance = 314.86, change = -24, stats }) => {
+const Balance = () => {
+  const transactions = useSelector(state => state.transactions.items);
+  const userId = Cookies.get('userId');
+
+  const userTransactions = transactions.filter(tx => String(tx.userId) === String(userId));
+
+  const balance = userTransactions.reduce((acc, tx) => {
+    if (tx.type === 'income') return acc + Number(tx.amount);
+    if (tx.type === 'expense') return acc - Number(tx.amount);
+    return acc;
+  }, 0);
+
+
   const today = new Date().toLocaleDateString();
 
   return (
@@ -12,13 +26,10 @@ const Balance = ({ balance = 314.86, change = -24, stats }) => {
       </div>
 
       <div className="balance-amount">
-        <h1>${balance}</h1>
-        <p className={`balance-change ${change < 0 ? 'negative' : 'positive'}`}>
-          {change}% Compared to last week
-        </p>
+        <h1>{balance.toFixed(2)} ₸</h1>
       </div>
 
-      <div className="card-details">
+      {/* <div className="card-details">
         <div className="card-number">**** **** 9894 4958</div>
         <div className="card-holder">Shin Ryujin</div>
         <div className="card-expiry">
@@ -29,30 +40,8 @@ const Balance = ({ balance = 314.86, change = -24, stats }) => {
           <span>C/W</span>
           <span>3124</span>
         </div>
-      </div>
-
-      <div className="activity-header">
-        <h3>Monthly Activity</h3>
-        <p className="activity-year">2022</p>
-      </div>
-
-      <div className="activity-toggle">
-        <button className="toggle-btn active">Monthly</button>
-        <button className="toggle-btn">Yearly</button>
-        <span className="toggle-check">✔</span>
-      </div>
-
-      {/* <div className="balance-stats">
-        {stats.map((stat, index) => (
-          <div className="stat-item" key={index}>
-            <h4>{stat.title}</h4>
-            <p className={`stat-amount ${stat.value < 0 ? 'negative' : 'positive'}`}>
-              ${stat.value}
-            </p>
-            {stat.date && <p className="stat-date">{stat.date}</p>}
-          </div>
-        ))}
       </div> */}
+
     </div>
   );
 };

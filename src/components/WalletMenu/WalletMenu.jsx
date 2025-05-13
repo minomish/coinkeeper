@@ -9,10 +9,8 @@ const WalletMenu = () => {
 
   const menuItems = [
     { key: 'dashboard', label: 'Home', icon: <FaHome />, to: '/dashboard' },
-    { key: 'account', label: 'Account', icon: <FaUser />, to: '/account' },
-    { key: 'wallet', label: 'Wallet', icon: <FaWallet />, to: '/wallet' },
     { key: 'stats', label: 'Statistics', icon: <FaChartPie />, to: '/stats' },
-    { key: 'settings', label: 'Settings', icon: <FaCog />, to: '/settings' },
+    { key: 'settings', label: 'Categories', icon: <FaCog />, to: '/settings' },
   ];
 
   const footerItems = [

@@ -17,7 +17,6 @@ const App = () => {
       {!hideWalletMenu && <WalletMenu />}
       <Routes>
         <Route path="/" element={<RegisterPage />} />
-        <Route path="/home" element={<HomePage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/stats" element={<StatsPage />} />
         <Route path="/settings" element={<SettingsPage />} />

@@ -1,5 +1,168 @@
 {
-  "transactions": [],
-  "categories": [],
-  "users": []
+  "transactions": [
+    {
+      "id": "1",
+      "type": "income",
+      "amount": 1000,
+      "categoryId": 1,
+      "date": "2025-05-01",
+      "comment": "Зарплата",
+      "userId": "1",
+      "createdAt": "2025-05-01T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "type": "expense",
+      "amount": 200,
+      "categoryId": 2,
+      "date": "2025-05-02",
+      "comment": "Продукты",
+      "userId": "1",
+      "createdAt": "2025-05-02T12:00:00Z"
+    },
+    {
+      "id": "1747128072348",
+      "type": "income",
+      "amount": 4444,
+      "categoryId": "1",
+      "comment": "",
+      "date": "2025-05-13T09:21:12.348Z",
+      "userId": "4233"
+    },
+    {
+      "id": "1747128082844",
+      "type": "income",
+      "amount": 3333,
+      "categoryId": "3333",
+      "comment": "",
+      "date": "2025-05-13T09:21:22.844Z",
+      "userId": "4233"
+    },
+    {
+      "id": "1747128549466",
+      "type": "income",
+      "amount": 444,
+      "categoryId": "амам",
+      "comment": "",
+      "date": "2025-05-13T09:29:09.466Z",
+      "userId": "4233"
+    },
+    {
+      "id": "1747128714960",
+      "type": "expense",
+      "amount": 444,
+      "categoryId": "1",
+      "comment": "",
+      "date": "2025-05-13T09:31:54.960Z",
+      "userId": "4233"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Зарплата",
+      "type": "income",
+      "color": "#4caf50",
+      "icon": "FaMoneyBillAlt",
+      "userId": null
+    },
+    {
+      "id": "2",
+      "name": "Продукты",
+      "type": "expense",
+      "color": "#f44336",
+      "icon": "FaAppleAlt",
+      "userId": null
+    },
+    {
+      "id": "3",
+      "name": "Подарок",
+      "type": "income",
+      "color": "#2196f3",
+      "icon": "FaGift",
+      "userId": "fdc0"
+    },
+    {
+      "id": "1747127384159",
+      "name": "lll",
+      "type": "income",
+      "color": "#000000",
+      "icon": "FaTag",
+      "userId": null
+    },
+    {
+      "id": "1747127409488",
+      "name": "fvf",
+      "type": "income",
+      "color": "#000000",
+      "icon": "FaTag",
+      "userId": null
+    },
+    {
+      "id": "1747127479321",
+      "name": "ddf",
+      "type": "income",
+      "color": "#000000",
+      "icon": "FaTag",
+      "userId": null
+    },
+    {
+      "id": "1747127552041",
+      "name": "gggg",
+      "type": "income",
+      "color": "#000000",
+      "icon": "FaTag",
+      "userId": null
+    },
+    {
+      "id": "1747127756007",
+      "name": "dd",
+      "type": "income",
+      "color": "#000000",
+      "icon": "FaTag",
+      "userId": null
+    },
+    {
+      "id": "1747128082843",
+      "name": "3333",
+      "type": "income",
+      "color": "#000000",
+      "icon": "FaTag",
+      "userId": "4233"
+    },
+    {
+      "id": "1747128549464",
+      "name": "амам",
+      "type": "income",
+      "color": "#000000",
+      "icon": "FaTag",
+      "userId": "4233"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "test@example.com",
+      "password": "123456",
+      "balance": 800
+    },
+    {
+      "id": "fdc0",
+      "email": "111",
+      "password": "111",
+      "balance": 0
+    },
+    {
+      "id": "b50f",
+      "email": "2",
+      "password": "2",
+      "balance": 0
+    },
+    {
+      "id": "4233",
+      "email": "444",
+      "password": "444",
+      "balance": 0
+    }
+  ]
 }
